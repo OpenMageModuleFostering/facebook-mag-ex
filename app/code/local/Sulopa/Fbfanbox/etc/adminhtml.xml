@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+			<sulopa>
+				<title>Sulopa Extension</title>
+				<sort_order>71</sort_order>  
+				<children>
+					<fbfanbox module="fbfanbox">
+						<title>Fbfanbox</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<items module="fbfanbox">
+								<title>FbFanBox Setting </title>
+								<sort_order>0</sort_order>
+								<action>adminhtml/system_config/edit/section/fbfanbox</action>
+							</items>
+						</children>
+					</fbfanbox>
+				</children>
+			</sulopa>	
+		
+			
+		</menu>
+		
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<fbfanbox translate="title">
+											<title>FBFanBox</title>
+											<sort_order>50</sort_order>
+										</fbfanbox>																			
+									</children>
+								</config>
+							</children>
+						</system>
+						<Sulopa_Fbfanbox>
+							<title>Fbfanbox Module</title>
+							<sort_order>10</sort_order>
+						</Sulopa_Fbfanbox>						
+					</children>
+				</admin>
+			</resources>
+		</acl>		
+</config>

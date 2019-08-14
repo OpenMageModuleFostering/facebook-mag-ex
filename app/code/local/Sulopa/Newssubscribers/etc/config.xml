@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sulopa_Newssubscribers>
+            <version>0.1.0</version>
+        </Sulopa_Newssubscribers>
+    </modules>
+
+    <frontend>
+        <routers>
+            <newsletter>
+                <args>
+                    <modules>
+                        <Sulopa_Newssubscribers before="Mage_Newsletter">Sulopa_Newssubscribers</Sulopa_Newssubscribers>
+                    </modules>
+                </args>
+            </newsletter>
+        </routers>
+
+        <layout>
+            <updates>
+                <newssubscribers>
+                    <file>newssubscribers.xml</file>
+                </newssubscribers>
+            </updates>
+        </layout>
+
+        <translate>
+            <modules>
+                <Sulopa_Newssubscribers>
+                    <files>
+                        <default>Sulopa_Newssubscribers.csv</default>
+                    </files>
+                </Sulopa_Newssubscribers>
+            </modules>
+        </translate>
+    </frontend>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <Sulopa_Newssubscribers>
+                    <files>
+                        <default>Sulopa_Adminhtml_Newssubscribers.csv</default>
+                    </files>
+                </Sulopa_Newssubscribers>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <global>
+        <blocks>
+            <newssubscribers>
+                <class>Sulopa_Newssubscribers_Block</class>
+            </newssubscribers>
+        </blocks>
+
+        <helpers>
+            <newssubscribers>
+                <class>Sulopa_Newssubscribers_Helper</class>
+            </newssubscribers>
+        </helpers>
+
+        <models>
+            <newssubscribers>
+                <class>Sulopa_Newssubscribers_Model</class>
+            </newssubscribers>
+            <newsletter>
+                <rewrite>
+                    <subscriber>Sulopa_Newssubscribers_Model_Subscriber</subscriber>
+                </rewrite>
+            </newsletter>
+        </models>
+
+    </global>
+
+    <default>
+        <newsletter>
+            <general>
+                <isactive>1</isactive>
+                <cookielifetime>60</cookielifetime>
+                <cookiename>su_newssubscribers</cookiename>
+                <theme>default</theme>
+                <firsttitle>Newsletter Sign Up</firsttitle>
+                <secondtitle></secondtitle>
+                <message>Would you like to be one of the first to receive exclusive information about the latest collections, offers and events from this online shop? Then just subscribe to our free newsletter now.</message>
+            </general>
+            <coupon>
+                <isactive>0</isactive>
+                <format>alphanum</format>
+                <length>8</length>
+            </coupon>
+        </newsletter>
+    </default>
+</config>

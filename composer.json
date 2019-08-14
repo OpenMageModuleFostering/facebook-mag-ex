@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/facebook-mag-ex",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "Fanbox is a free extension that enables you to show a box of Fanpage on your site.",
+    "authors": [
+    {
+        "name": "Sulopa Sulotion",
+        "email": "info@sulopa.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
